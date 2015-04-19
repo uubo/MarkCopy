@@ -11,3 +11,9 @@ def compare(request):
         'url2': "http://troll-face.ru/static/mememaker/f/c/24817-vasya-afrika.jpg",
     })
     return HttpResponse(template.render(context))
+
+def count(request):
+	winUrl = request.POST['win']
+	loseUrl = request.POST['lose']
+
+	return HttpResponseRedirect("faces/compare");
